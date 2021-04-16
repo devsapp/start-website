@@ -1,9 +1,9 @@
-import _ from 'lodash';
+import _ from 'lodash'
 
 function component() {
-  const element = document.createElement('div');
-  element.innerHTML = _.join(['Hello', 'jamstack-static-compoment'], ' ');
-  return element;
+  const element = document.createElement('div')
+  element.innerHTML = _.join(['Hello', 'website-base'], ' ')
+  return element
 }
 
-document.body.appendChild(component());
+document.body.appendChild(component())
