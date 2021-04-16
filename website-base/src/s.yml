@@ -1,0 +1,14 @@
+edition: 1.0.0
+services:
+  website-starter:
+    component: website
+    access: private
+    props:
+      bucket: jamstack-hangzhou
+      src:
+        src: "src"
+        dist: "build"
+        hook: npm run build
+        index: index.html
+        error: index.html
+      region: cn-hangzhou
