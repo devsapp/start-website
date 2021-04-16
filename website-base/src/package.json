@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@serverless-devs/core": "^0.0.63",
     "lodash": "^4.17.21"
   },
   "devDependencies": {

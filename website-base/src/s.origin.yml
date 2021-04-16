@@ -1,7 +1,7 @@
 edition: 1.0.0
 services:
   website-starter:
-    component: devsapp/website
+    component: 'devsapp/website'
     access: my
     props:
       bucket: shl-website-test01
@@ -13,4 +13,4 @@ services:
         error: index.html
       region: cn-hangzhou
       hosts:
-        - host: shl-website-test01.oss.devsapp.cn
+        - host: auto
