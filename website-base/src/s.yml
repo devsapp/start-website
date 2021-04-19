@@ -4,7 +4,7 @@ services:
     component: devsapp/website
     access: my
     props:
-      bucket: "{{ bucket }}"
+      bucket: "{{ bucket|bucket存储桶 }}"
       src:
         codeUri: ./
         publishDir: ./build
