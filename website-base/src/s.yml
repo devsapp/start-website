@@ -4,7 +4,7 @@ services:
     component: devsapp/website
     access: my
     props:
-      bucket: shl-website-test01
+      bucket: {{ bucket }}
       src:
         codeUri: ./
         publishDir: ./build
