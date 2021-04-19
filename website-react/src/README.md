@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+**阿里云 Website 静态网站组件** ⎯⎯⎯ 通过使用 [Serverless-Devs](https://github.com/devsapp)，基于云上 Serverless 服务（如对象存储等），实现“0”配置，便捷开发，极速部署你的静态网站，Website 静态网站组件支持丰富的配置扩展，如自定义域名和 CDN 加速等。提供了目前最易用、低成本并且弹性伸缩的静态站点开发和托管能力。
+<br/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+特性介绍：
 
-## Available Scripts
+- [x] **按需付费** - 按照请求的使用量进行收费，没有请求时无需付费
+- [x] **"0"配置** - 只需要关心项目代码，之后部署即可，Serverless-Devs 会搞定所有配置。
+- [x] **极速部署** - 仅需几秒，部署你的静态网站。
+- [x] **CDN 加速，SSL 证书配置和自定义域名** - 支持配置 CDN 加速，支持自定义域名及 HTTPS 访问
 
-In the project directory, you can run:
+<br/>
 
-### `yarn start`
+快速开始：
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. [**安装**](#1-安装)
+2. [**创建**](#2-创建)
+3. [**部署**](#3-部署)
+4. [**配置**](#4-配置)
+5. [**账号配置(可选)**](<#账号配置(可选)>)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+&nbsp;
 
-### `yarn test`
+### 1. 安装
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+通过 npm 安装最新版本的 Serverless Devs
 
-### `yarn build`
+```
+$ npm install @serverless-devs/s -g
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2. 创建
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+通过如下命令，快速创建一个静态网站托管应用
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+$ s init devsapp/website-example/website-react
+```
 
-### `yarn eject`
+下载完毕后，目录结构如下所示：
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+|- src
+|   └── index.html
+└──  s.yml
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+在 `src` 目录中既可以托管简单的 html 文件，也可以托管完整的 React/Vue 的应用。
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 3. 部署
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+在 `s.yml` 文件下的目录中运行如下命令进行静态网站的部署。部署完毕后，你可以在命令行的输出中查看到你静态网站的 URL 地址，点击地址即可访问网站托管的链接。
 
-## Learn More
+```
+$ s deploy
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+如果希望查看更多部署过程的信息，可以通过`s deploy --debug` 命令查看部署过程中的实时日志信息
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br/>
 
-### Code Splitting
+### 4. 配置
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+静态网站组件支持 0 配置部署，也就是可以直接通过配置文件中的默认值进行部署。但你依然可以修改更多可选配置来进一步开发该静态网站项目。
 
-### Analyzing the Bundle Size
+以下是静态网站 Website 组件的 `s.yml`部分配置说明：
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```yml
 
-### Making a Progressive Web App
+component: website # (必填) 引用 component 的名称，当前用到的是 website 组件
+name: websitedemo # (必填) 该 website 组件创建的实例名称
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+edition: 1.0.0
+services:
+  website:
+    component: website # (必填) 引用 component 的名称
+    access: default
+    props:
+      bucket: my-bucket
+      src:
+        src: './src'
+        dist: './build'
+        hook: npm run build
+        index: index.html
+        error: index.html
+      region: cn-hangzhou
+```
 
-### Advanced Configuration
+点此查看[全量配置及配置说明](https://github.com/devsapp/website/blob/master/docs/config.md)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+当你根据该配置文件更新配置字段后，再次运行 `s deploy`
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 账号配置
+通过serverless Devs工具添加密钥信息
+```
+$ s config add
+```
+注意：本组件只支持阿里云，需要选择阿里云密钥信息
 
-### `yarn build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 使用文档
+
+[全量配置](./docs/config.md)
+
+[高级配置](./docs/advance.md)
+
+## 模板应用
+所有模板应用均托管在[githu仓库上](https://github.com/devsapp/website-example)，目前支持模板应用包括
+- 普通静态资源应用: `s init devsapp/website-example/website-base`
+- react应用 `s init devsapp/website-example/website-react`
+- vue应用 `s init devsapp/website-example/website-vue`
+- hexo应用 `s init devsapp/website-example/website-hexo`
+- docusaurus应用 `s init devsapp/website-example/website-docusaurus`
+- vuepress应用 `s init devsapp/website-example/website-vuepress`
+
+-----
+> - Serverless Devs 项目：https://www.github.com/serverless-devs/serverless-devs   
+> - Serverless Devs 文档：https://www.github.com/serverless-devs/docs   
+> - Serverless Devs 钉钉交流群：33947367    

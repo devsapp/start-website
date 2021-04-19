@@ -28,13 +28,12 @@
 $ npm install @serverless-devs/s -g
 ```
 
-### 2. 创建 (TODO)
+### 2. 创建
 
 通过如下命令，快速创建一个静态网站托管应用
 
 ```bash
-$ s init website-starter --name example
-$ cd example
+$ s init devsapp/website-example/website-base
 ```
 
 下载完毕后，目录结构如下所示：
@@ -42,7 +41,7 @@ $ cd example
 ```
 |- src
 |   └── index.html
-└──  serverless.yml
+└──  s.yml
 ```
 
 在 `src` 目录中既可以托管简单的 html 文件，也可以托管完整的 React/Vue 的应用。
@@ -66,7 +65,6 @@ $ s deploy
 以下是静态网站 Website 组件的 `s.yml`部分配置说明：
 
 ```yml
-# serverless.yml
 
 component: website # (必填) 引用 component 的名称，当前用到的是 website 组件
 name: websitedemo # (必填) 该 website 组件创建的实例名称
@@ -92,7 +90,6 @@ services:
 当你根据该配置文件更新配置字段后，再次运行 `s deploy`
 
 
-
 ## 账号配置
 通过serverless Devs工具添加密钥信息
 ```
@@ -106,3 +103,17 @@ $ s config add
 [全量配置](./docs/config.md)
 
 [高级配置](./docs/advance.md)
+
+## 模板应用
+所有模板应用均托管在[githu仓库上](https://github.com/devsapp/website-example)，目前支持模板应用包括
+- 普通静态资源应用: `s init devsapp/website-example/website-base`
+- react应用 `s init devsapp/website-example/website-react`
+- vue应用 `s init devsapp/website-example/website-vue`
+- hexo应用 `s init devsapp/website-example/website-hexo`
+- docusaurus应用 `s init devsapp/website-example/website-docusaurus`
+- vuepress应用 `s init devsapp/website-example/website-vuepress`
+
+-----
+> - Serverless Devs 项目：https://www.github.com/serverless-devs/serverless-devs   
+> - Serverless Devs 文档：https://www.github.com/serverless-devs/docs   
+> - Serverless Devs 钉钉交流群：33947367    
