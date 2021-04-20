@@ -33,7 +33,7 @@ $ npm install @serverless-devs/s -g
 通过如下命令，快速创建一个静态网站托管应用
 
 ```bash
-$ s init devsapp/website-example/website-docusaurus
+$ s init devsapp/website-example:website-docusaurus
 ```
 
 下载完毕后，目录结构如下所示：
@@ -106,12 +106,12 @@ $ s config add
 
 ## 模板应用
 所有模板应用均托管在[githu仓库上](https://github.com/devsapp/website-example)，目前支持模板应用包括
-- 普通静态资源应用: `s init devsapp/website-example/website-base`
-- react应用 `s init devsapp/website-example/website-react`
-- vue应用 `s init devsapp/website-example/website-vue`
-- hexo应用 `s init devsapp/website-example/website-hexo`
-- docusaurus应用 `s init devsapp/website-example/website-docusaurus`
-- vuepress应用 `s init devsapp/website-example/website-vuepress`
+- 普通静态资源应用: `s init devsapp/website-example:website-base`
+- react应用 `s init devsapp/website-example:website-react`
+- vue应用 `s init devsapp/website-example:website-vue`
+- hexo应用 `s init devsapp/website-example:website-hexo`
+- docusaurus应用 `s init devsapp/website-example:website-docusaurus`
+- vuepress应用 `s init devsapp/website-example:website-vuepress`
 
 -----
 > - Serverless Devs 项目：https://www.github.com/serverless-devs/serverless-devs   
