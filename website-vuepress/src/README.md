@@ -100,9 +100,9 @@ $ s config add
 
 ## 使用文档
 
-[全量配置](./docs/config.md)
+[全量配置](https://github.com/devsapp/website/tree/master/docs/config.md)
 
-[高级配置](./docs/advance.md)
+[高级配置](https://github.com/devsapp/website/tree/master/docs/advance.md)
 
 ## 模板应用
 所有模板应用均托管在[githu仓库上](https://github.com/devsapp/website-example)，目前支持模板应用包括
