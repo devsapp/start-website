@@ -65,7 +65,6 @@ $ s deploy
 以下是静态网站 Website 组件的 `s.yml`部分配置说明：
 
 ```yml
-
 component: website # (必填) 引用 component 的名称，当前用到的是 website 组件
 name: websitedemo # (必填) 该 website 组件创建的实例名称
 
@@ -77,9 +76,9 @@ services:
     props:
       bucket: my-bucket
       src:
-        src: './src'
-        dist: './build'
-        hook: npm run build
+        codeUri: './src'
+        publishDir: './build' # (必填) 项目打包输出的目录
+        buildCommand: npm run build
         index: index.html
         error: index.html
       region: cn-hangzhou
@@ -89,14 +88,15 @@ services:
 
 当你根据该配置文件更新配置字段后，再次运行 `s deploy`
 
-
 ## 账号配置
-通过serverless Devs工具添加密钥信息
+
+通过 serverless Devs 工具添加密钥信息
+
 ```
 $ s config add
 ```
-注意：本组件只支持阿里云，需要选择阿里云密钥信息
 
+注意：本组件只支持阿里云，需要选择阿里云密钥信息
 
 ## 使用文档
 
@@ -105,15 +105,18 @@ $ s config add
 [高级配置](./docs/advance.md)
 
 ## 模板应用
-所有模板应用均托管在[githu仓库上](https://github.com/devsapp/website-example)，目前支持模板应用包括
-- 普通静态资源应用: `s init devsapp/website-example/website-base`
-- react应用 `s init devsapp/website-example/website-react`
-- vue应用 `s init devsapp/website-example/website-vue`
-- hexo应用 `s init devsapp/website-example/website-hexo`
-- docusaurus应用 `s init devsapp/website-example/website-docusaurus`
-- vuepress应用 `s init devsapp/website-example/website-vuepress`
 
------
-> - Serverless Devs 项目：https://www.github.com/serverless-devs/serverless-devs   
-> - Serverless Devs 文档：https://www.github.com/serverless-devs/docs   
-> - Serverless Devs 钉钉交流群：33947367    
+所有模板应用均托管在[github 仓库上](https://github.com/devsapp/website-example)，目前支持模板应用包括
+
+- 普通静态资源应用: `s init devsapp/website-example/website-base`
+- react 应用 `s init devsapp/website-example/website-react`
+- vue 应用 `s init devsapp/website-example/website-vue`
+- hexo 应用 `s init devsapp/website-example/website-hexo`
+- docusaurus 应用 `s init devsapp/website-example/website-docusaurus`
+- vuepress 应用 `s init devsapp/website-example/website-vuepress`
+
+---
+
+> - Serverless Devs 项目：https://www.github.com/serverless-devs/serverless-devs
+> - Serverless Devs 文档：https://www.github.com/serverless-devs/docs
+> - Serverless Devs 钉钉交流群：33947367
