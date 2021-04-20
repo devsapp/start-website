@@ -2,15 +2,15 @@ edition: 1.0.0
 services:
   website-starter:
     component: devsapp/website
-    access: my
+    access: default
     props:
-      bucket: "{{ bucket|alibaba oss bucket }}"
+      bucket: '{{ bucket|alibaba oss bucket }}'
       src:
         codeUri: ./
         publishDir: ./build
-        buildCommand: npm run build
+        buildCommand: npm i && npm run build
         index: index.html
         error: index.html
       region: cn-hangzhou
       hosts:
-        - host: shl-website-test01.oss.devsapp.cn
+        - host: auto
