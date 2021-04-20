@@ -33,7 +33,7 @@ $ npm install @serverless-devs/s -g
 通过如下命令，快速创建一个静态网站托管应用
 
 ```bash
-$ s init devsapp/website-example/website-vue
+$ s init devsapp/website-example/website-base
 ```
 
 下载完毕后，目录结构如下所示：
