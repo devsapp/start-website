@@ -1269,7 +1269,7 @@
     dayjs "^1.8.19"
     remove-markdown "^0.3.0"
     vue-feather-icons "^4.21.0"
-    vuepress-plugin-smooth-scroll "^0.0.9"
+    vuepress-plugin-smooth-scroll "^0.0.2"
 
 "@vuepress/theme-default@1.8.2":
   version "1.8.2"
@@ -8058,9 +8058,9 @@ vuepress-plugin-smooth-scroll@^0.0.3:
   dependencies:
     smoothscroll-polyfill "^0.4.3"
 
-vuepress-plugin-smooth-scroll@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-smooth-scroll/-/vuepress-plugin-smooth-scroll-0.0.9.tgz#6c5d01db60def3d7b976b53404e56b97da9e8f39"
+vuepress-plugin-smooth-scroll@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-smooth-scroll/-/vuepress-plugin-smooth-scroll-0.0.2.tgz#6c5d01db60def3d7b976b53404e56b97da9e8f39"
   integrity sha512-UXX+HLZO1NKVwyiOJlj0smh8F9dKnwybjEi7w/Mj9EYLhKrNYr5uXs+N+OTt8VwKCn3f0vZ1XAwFIjsPlD7GJA==
   dependencies:
     smoothscroll-polyfill "^0.4.4"
