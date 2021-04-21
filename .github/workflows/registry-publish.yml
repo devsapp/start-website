@@ -24,13 +24,6 @@ jobs:
       - name: NPM install
         run: |
           npm install --production
-      - name: Publish All
-        env:
-          publish_token: ${{ secrets.alibaba_registry_publish_token }}
-        run: |
-          wget https://serverless-registry.oss-cn-hangzhou.aliyuncs.com/publish-file/python3/hub-publish.py
-          ls
-          python hub-publish.py
       - name: Publish base
         env:
           publish_token: ${{ secrets.alibaba_registry_publish_token }}
