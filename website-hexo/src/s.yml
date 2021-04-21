@@ -11,7 +11,7 @@ services:
         - run: npm run build
           path: ./
     props:
-      bucket: my-hexo-example
+      bucket: '{{ bucket|alibaba oss bucket }}'
       src:
         codeUri: ./
         publishDir: ./public
