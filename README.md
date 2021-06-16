@@ -78,7 +78,6 @@ services:
       src:
         codeUri: './src'
         publishDir: './build' # (必填) 项目打包输出的目录
-        buildCommand: npm run build
         index: index.html
         error: index.html
       region: cn-hangzhou
