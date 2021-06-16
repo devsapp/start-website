@@ -76,10 +76,8 @@ services:
     props:
       bucket: my-bucket
       src:
-        codeUri: './src'
         publishDir: './build' # (必填) 项目打包输出的目录
         index: index.html
-        error: index.html
       region: cn-hangzhou
 ```
 
