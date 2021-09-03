@@ -1,4 +1,4 @@
-![website](https://img.alicdn.com/imgextra/i2/O1CN01e4g8b3282nikESLv3_!!6000000007875-2-tps-1810-690.png)
+![website](https://img.alicdn.com/imgextra/i1/O1CN01lwhbDg1wmLier8UrL_!!6000000006350-2-tps-1810-686.png)
 
 **阿里云 Website 静态网站组件** ⎯⎯⎯ 通过使用 [Serverless-Devs](https://github.com/devsapp)，基于云上 Serverless 服务（如对象存储等），实现“0”配置，便捷开发，极速部署你的静态网站，Website 静态网站组件支持丰富的配置扩展，如自定义域名和 CDN 加速等。提供了目前最易用、低成本并且弹性伸缩的静态站点开发和托管能力。
 <br/>
