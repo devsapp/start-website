@@ -1,4 +1,4 @@
-![website](https://img.alicdn.com/imgextra/i2/O1CN01e4g8b3282nikESLv3_!!6000000007875-2-tps-1810-690.png)
+![website](https://img.alicdn.com/imgextra/i1/O1CN01lwhbDg1wmLier8UrL_!!6000000006350-2-tps-1810-686.png)
 
 # 阿里云函数计算：Website-Base框架
 
