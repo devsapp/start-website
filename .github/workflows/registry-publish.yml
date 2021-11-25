@@ -21,59 +21,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install setuptools wheel twine
           pip install requests
-      - name: NPM install
-        run: |
-          npm install --production
-      - name: Publish base
+      - name: Publish package
         env:
           publish_token: ${{ secrets.alibaba_registry_publish_token }}
         run: |
-          cd website-base
-          wget https://serverless-registry.oss-cn-hangzhou.aliyuncs.com/publish-file/python3/hub-publish.py
           ls
-          python hub-publish.py
-          cd ..
-      - name: Publish docusaurus
-        env:
-          publish_token: ${{ secrets.alibaba_registry_publish_token }}
-        run: |
-          cd website-docusaurus
-          wget https://serverless-registry.oss-cn-hangzhou.aliyuncs.com/publish-file/python3/hub-publish.py
-          ls
-          python hub-publish.py
-          cd ..
-      - name: Publish hexo
-        env:
-          publish_token: ${{ secrets.alibaba_registry_publish_token }}
-        run: |
-          cd website-hexo
-          wget https://serverless-registry.oss-cn-hangzhou.aliyuncs.com/publish-file/python3/hub-publish.py
-          ls
-          python hub-publish.py
-          cd ..
-      - name: Publish react
-        env:
-          publish_token: ${{ secrets.alibaba_registry_publish_token }}
-        run: |
-          cd website-react
-          wget https://serverless-registry.oss-cn-hangzhou.aliyuncs.com/publish-file/python3/hub-publish.py
-          ls
-          python hub-publish.py
-          cd ..
-      - name: Publish vue
-        env:
-          publish_token: ${{ secrets.alibaba_registry_publish_token }}
-        run: |
-          cd website-vue
-          wget https://serverless-registry.oss-cn-hangzhou.aliyuncs.com/publish-file/python3/hub-publish.py
-          ls
-          python hub-publish.py
-          cd ..
-      - name: Publish vuepress
-        env:
-          publish_token: ${{ secrets.alibaba_registry_publish_token }}
-        run: |
-          cd website-vuepress
-          wget https://serverless-registry.oss-cn-hangzhou.aliyuncs.com/publish-file/python3/hub-publish.py
-          ls
-          python hub-publish.py
+          python publish.py
