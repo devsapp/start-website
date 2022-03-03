@@ -1,119 +1,57 @@
-**阿里云 Website 静态网站组件** ⎯⎯⎯ 通过使用 [Serverless-Devs](https://github.com/devsapp)，基于云上 Serverless 服务（如对象存储等），实现“0”配置，便捷开发，极速部署你的静态网站，Website 静态网站组件支持丰富的配置扩展，如自定义域名和 CDN 加速等。提供了目前最易用、低成本并且弹性伸缩的静态站点开发和托管能力。
-<br/>
+[![Deploy with Severless Devs](https://img.alicdn.com/imgextra/i4/O1CN01FJj5OH1wQp91MQNs5_!!6000000006303-55-tps-113-34.svg)](https://fcnext.console.aliyun.com/applications/create?template=website-react)
 
-特性介绍：
+# Website 静态网站
 
-- [x] **按需付费** - 按照请求的使用量进行收费，没有请求时无需付费
-- [x] **"0"配置** - 只需要关心项目代码，之后部署即可，Serverless-Devs 会搞定所有配置。
-- [x] **极速部署** - 仅需几秒，部署你的静态网站。
-- [x] **CDN 加速，SSL 证书配置和自定义域名** - 支持配置 CDN 加速，支持自定义域名及 HTTPS 访问
+> 快速部署和体验Serverless架构下的前端静态网站
 
-<br/>
+- [体验前准备](#体验前准备)
+- [代码与预览](#代码与预览)
+- [快速部署和体验](#快速部署和体验)
+    - [在线快速体验](#在线快速体验)
+    - [在本地部署体验](#在本地部署体验)
+- [项目使用注意事项](#项目使用注意事项)
+- [应用详情](#应用详情)
 
-快速开始：
+## 体验前准备
 
-1. [**安装**](#1-安装)
-2. [**创建**](#2-创建)
-3. [**部署**](#3-部署)
-4. [**配置**](#4-配置)
-5. [**账号配置(可选)**](<#账号配置(可选)>)
+该应用案例，需要您开通[阿里云OSS](https://oss.console.aliyun.com/)以及 [阿里云CDN](https://cdn.console.aliyun.com/) 产品。
 
-&nbsp;
+## 代码与预览
 
-### 1. 安装
+- [:octocat: 源代码](https://github.com/devsapp/start-website/tree/master/website-react/src)
+- [:earth_africa: 效果预览](http://django.web-framework.1583208943291465.cn-shenzhen.fc.devsapp.net/)
 
-通过 npm 安装最新版本的 Serverless Devs
+## 快速部署和体验
+### 在线快速体验
 
-```
-$ npm install @serverless-devs/s -g
-```
+- 通过阿里云 **Serverless 应用中心**： 可以点击 [【🚀 部署】](https://fcnext.console.aliyun.com/applications/create?template=website-react) ，按照引导填入参数，快速进行部署和体验。
 
-### 2. 创建
+### 在本地部署体验
 
-通过如下命令，快速创建一个静态网站托管应用
+1. 下载安装 Serverless Devs：`npm install @serverless-devs/s`
+   > 详细文档可以参考 [Serverless Devs 安装文档](https://github.com/Serverless-Devs/Serverless-Devs/blob/master/docs/zh/install.md)
+2. 配置密钥信息：`s config add`
+   > 详细文档可以参考 [阿里云密钥配置文档](https://github.com/devsapp/fc/blob/main/docs/zh/config.md)
+3. 初始化项目：`s init website-react -d website-react`
+4. 进入项目并部署：`cd website-react && s deploy`
 
-```bash
-$ s init devsapp/website-react
-```
+## 项目使用注意事项
+项目Yaml中，声明了`actions`，其对应的命令分别为`npm install`以及`npm run build`。如果已经安装依赖或者无需`build`，再部署的时候通过`--skip-actions`跳过：`s deploy --skip-actions`。
+或者注释掉`actions`的声明。加速`deploy`的部署流程
 
-下载完毕后，目录结构如下所示：
+## 应用详情
+通过 Serverless Devs 开发者工具，您只需要几步，就可以体验 Serverless 架构，带来的降本提效的技术红利。
 
-```
-|- src
-|   └── index.html
-└──  s.yml
-```
+本案例应用是一个非常简单的静态网站案例，部署完成之后，您可以看到系统返回给您的案例地址，例如：
 
-在 `src` 目录中既可以托管简单的 html 文件，也可以托管完整的 React/Vue 的应用。
+![图片alt](https://img.alicdn.com/imgextra/i3/O1CN01qtDy7d1GqjgkaTlrS_!!6000000000674-0-tps-720-190.jpg)
 
-### 3. 部署
+此时，打开案例地址，就可以看到测试的应用详情：
 
-在 `s.yml` 文件下的目录中运行如下命令进行静态网站的部署。部署完毕后，你可以在命令行的输出中查看到你静态网站的 URL 地址，点击地址即可访问网站托管的链接。
-
-```
-$ s deploy
-```
-
-如果希望查看更多部署过程的信息，可以通过`s deploy --debug` 命令查看部署过程中的实时日志信息
-
-<br/>
-
-### 4. 配置
-
-静态网站组件支持 0 配置部署，也就是可以直接通过配置文件中的默认值进行部署。但你依然可以修改更多可选配置来进一步开发该静态网站项目。
-
-以下是静态网站 Website 组件的 `s.yml`部分配置说明：
-
-```yml
-
-component: website # (必填) 引用 component 的名称，当前用到的是 website 组件
-name: websitedemo # (必填) 该 website 组件创建的实例名称
-
-edition: 1.0.0
-services:
-  website:
-    component: website # (必填) 引用 component 的名称
-    access: default
-    props:
-      bucket: my-bucket
-      src:
-        src: './src'
-        dist: './build'
-        hook: npm run build
-        index: index.html
-        error: index.html
-      region: cn-hangzhou
-```
-
-点此查看[全量配置及配置说明](https://github.com/devsapp/website/blob/master/docs/config.md)
-
-当你根据该配置文件更新配置字段后，再次运行 `s deploy`
-
-
-## 账号配置
-通过serverless Devs工具添加密钥信息
-```
-$ s config add
-```
-注意：本组件只支持阿里云，需要选择阿里云密钥信息
-
-
-## 使用文档
-
-[全量配置](https://github.com/devsapp/website/tree/master/docs/config.md)
-
-[高级配置](https://github.com/devsapp/website/tree/master/docs/advance.md)
-
-## 模板应用
-所有模板应用均托管在[githu仓库上](https://github.com/devsapp/website-example)，目前支持模板应用包括
-- 普通静态资源应用: `s init devsapp/website-base`
-- react应用 `s init devsapp/website-react`
-- vue应用 `s init devsapp/website-vue`
-- hexo应用 `s init devsapp/website-hexo`
-- docusaurus应用 `s init devsapp/website-docusaurus`
-- vuepress应用 `s init devsapp/website-vuepress`
+![图片alt](https://img.alicdn.com/imgextra/i2/O1CN01TupCnM1Q0CPjP3JJG_!!6000000001913-2-tps-2478-1312.png)
 
 -----
-> - Serverless Devs 项目：https://www.github.com/serverless-devs/serverless-devs   
-> - Serverless Devs 文档：https://www.github.com/serverless-devs/docs   
+
+> - Serverless Devs 项目：https://www.github.com/serverless-devs/serverless-devs
+> - Serverless Devs 文档：https://www.github.com/serverless-devs/docs
 > - Serverless Devs 钉钉交流群：33947367    
