@@ -10,7 +10,7 @@ edition: 1.0.0
 access: "{{ access }}"
 
 vars: # 全局变量
-  region: "{{ region }}"
+  region: "cn-hangzhou"
 
 services:
   website-vuepress:

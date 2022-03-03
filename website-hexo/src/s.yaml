@@ -10,7 +10,7 @@ edition: 1.0.0
 access: "{{ access }}"
 
 vars: # 全局变量
-  region: "cn-hangzhou"
+  region: "{{ region }}"
 
 services:
   website-hexo:

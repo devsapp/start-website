@@ -1,4 +1,7 @@
-[![Deploy with Severless Devs](https://img.alicdn.com/imgextra/i4/O1CN01FJj5OH1wQp91MQNs5_!!6000000006303-55-tps-113-34.svg)](https://fcnext.console.aliyun.com/applications/create?template=website-hexo)
+## 🚀 一键部署
+您可以点击 点击`一键部署`按钮,进行快速体验
+
+[![Deploy with Severless Devs](https://img.alicdn.com/imgextra/i1/O1CN01w5RFbX1v45s8TIXPz_!!6000000006118-55-tps-95-28.svg)](https://fcnext.console.aliyun.com/applications/create?template=website-hexo)
 
 # Website 静态网站
 
@@ -44,11 +47,11 @@
 
 本案例应用是一个非常简单的静态网站案例，部署完成之后，您可以看到系统返回给您的案例地址，例如：
 
-![图片alt](https://img.alicdn.com/imgextra/i3/O1CN01qtDy7d1GqjgkaTlrS_!!6000000000674-0-tps-720-190.jpg)
+![图片alt](https://img.alicdn.com/imgextra/i3/O1CN01fxYSoO1fHLTljwiTM_!!6000000003981-2-tps-1798-420.png)
 
 此时，打开案例地址，就可以看到测试的应用详情：
 
-![图片alt](https://img.alicdn.com/imgextra/i2/O1CN01TupCnM1Q0CPjP3JJG_!!6000000001913-2-tps-2478-1312.png)
+![图片alt](https://img.alicdn.com/imgextra/i4/O1CN01crbYOg1MXOeyDUzQ0_!!6000000001444-2-tps-2532-1328.png)
 
 -----
 
