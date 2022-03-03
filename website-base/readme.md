@@ -1,4 +1,7 @@
-[![Deploy with Severless Devs](https://img.alicdn.com/imgextra/i4/O1CN01FJj5OH1wQp91MQNs5_!!6000000006303-55-tps-113-34.svg)](https://fcnext.console.aliyun.com/applications/create?template=website-base)
+## 🚀 一键部署
+您可以点击 点击`一键部署`按钮,进行快速体验
+
+[![Deploy with Severless Devs](https://img.alicdn.com/imgextra/i1/O1CN01w5RFbX1v45s8TIXPz_!!6000000006118-55-tps-95-28.svg)](https://fcnext.console.aliyun.com/applications/create?template=website-base)
 
 # Website 静态网站
 
