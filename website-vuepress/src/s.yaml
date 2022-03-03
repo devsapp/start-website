@@ -10,7 +10,7 @@ edition: 1.0.0
 access: "{{ access }}"
 
 vars: # 全局变量
-  region: "cn-hangzhou"
+  region: "{{ region }}"
 
 services:
   website-vuepress:
@@ -18,12 +18,12 @@ services:
     actions:
       pre-deploy:
         - run: npm install
-          path: ./
+          path: ./code
         - run: npm run build
-          path: ./
+          path: ./code
     props:
       bucket: auto
-      codeUri: ./docs/.vuepress/dist
+      codeUri: ./code/docs/.vuepress/dist
       region: ${vars.region}
       website:
         index: index.html

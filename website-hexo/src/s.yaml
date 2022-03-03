@@ -18,12 +18,12 @@ services:
     actions:
       pre-deploy:
         - run: npm install
-          path: ./
+          path: ./code
         - run: npm run build
-          path: ./
+          path: ./code
     props:
       bucket: auto
-      codeUri: ./public
+      codeUri: ./code/public
       region: ${vars.region}
       website:
         index: index.html
