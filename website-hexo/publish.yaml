@@ -2,7 +2,7 @@ Type: Application
 Name: website-hexo
 Provider:
   - 阿里云
-Version: 0.0.6
+Version: 0.0.7
 Description: 阿里云静态资源组件，帮助您快速部署静态资源项目
 HomePage: https://github.com/devsapp/website-starter
 Tags:
