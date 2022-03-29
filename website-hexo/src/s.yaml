@@ -11,12 +11,10 @@ services:
     actions:
       pre-deploy:
         - run: npm install
-          path: ./code/hexo
-        - run: npm run build
-          path: ./code/hexo
-        - run: rm -rf ./server/public && mv ./hexo/public ./server/public
           path: ./code
-        
+        - run: npm run build
+          path: ./code
+        - plugin: website-fc
     props: # 组件的属性值
       region: ${vars.region}
       service:
@@ -25,15 +23,9 @@ services:
       function:
         name: "{{ functionName }}"
         description: "Serverless Devs Website hexo Function"
-        codeUri: "./code/server"
-        runtime: custom
+        codeUri: ./code/public
         timeout: 30
         memorySize: 512
-        customRuntimeConfig:
-          command:
-            - node
-          args:
-            - '/code/index.js'
       triggers:
         - name: httpTrigger
           type: http
