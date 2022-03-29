@@ -4,19 +4,17 @@ access: "{{ access }}" #  秘钥别名
 
 vars: # 全局变量
   region: "{{ region }}"
-  
+
 services:
   framework: # 业务名称/模块名称
     component: fc # 组件名称
     actions:
       pre-deploy:
         - run: npm install
-          path: ./code/docusaurus
-        - run: npm run build
-          path: ./code/docusaurus
-        - run: rm -rf ./server/public && mv ./docusaurus/build ./server/public
           path: ./code
-        
+        - run: npm run build
+          path: ./code
+        - plugin: website-fc
     props: # 组件的属性值
       region: ${vars.region}
       service:
@@ -25,15 +23,9 @@ services:
       function:
         name: "{{ functionName }}"
         description: "Serverless Devs Website Docusaurus Function"
-        codeUri: "./code/server"
-        runtime: custom
+        codeUri: ./code/build
         timeout: 30
         memorySize: 512
-        customRuntimeConfig:
-          command:
-            - node
-          args:
-            - '/code/index.js'
       triggers:
         - name: httpTrigger
           type: http
