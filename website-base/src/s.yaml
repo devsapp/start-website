@@ -10,9 +10,7 @@ services:
     component: fc # 组件名称
     actions:
       pre-deploy:
-        - run: rm -rf ./server/public && cp -r ./base ./server/public
-          path: ./code
-        
+        - plugin: website-fc
     props: # 组件的属性值
       region: ${vars.region}
       service:
@@ -21,15 +19,9 @@ services:
       function:
         name: "{{ functionName }}"
         description: "Serverless Devs Website website Function"
-        codeUri: "./code/server"
-        runtime: custom
+        codeUri: ./code
         timeout: 30
         memorySize: 512
-        customRuntimeConfig:
-          command:
-            - node
-          args:
-            - '/code/index.js'
       triggers:
         - name: httpTrigger
           type: http
