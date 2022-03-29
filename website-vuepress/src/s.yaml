@@ -11,12 +11,10 @@ services:
     actions:
       pre-deploy:
         - run: npm install
-          path: ./code/vuepress
-        - run: npm run build
-          path: ./code/vuepress
-        - run: rm -rf ./server/public && mv -f ./vuepress/docs/.vuepress/dist ./server/public
           path: ./code
-        
+        - run: npm run build
+          path: ./code
+        - plugin: website-fc
     props: # 组件的属性值
       region: ${vars.region}
       service:
@@ -25,15 +23,9 @@ services:
       function:
         name: "{{ functionName }}"
         description: "Serverless Devs Website vuepress Function"
-        codeUri: "./code/server"
-        runtime: custom
+        codeUri: ./code/docs/.vuepress/dist
         timeout: 30
         memorySize: 512
-        customRuntimeConfig:
-          command:
-            - node
-          args:
-            - '/code/index.js'
       triggers:
         - name: httpTrigger
           type: http
