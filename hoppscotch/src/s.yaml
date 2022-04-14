@@ -10,9 +10,11 @@ services:
     component: fc # 组件名称
     actions:
       pre-deploy:
-        - run: npm install
+        - run: npm install -g pnpm
           path: ./code
-        - run: npm run build
+        - run: pnpm i
+          path: ./code
+        - run: pnpm run generate
           path: ./code
         - plugin: website-fc
     props: # 组件的属性值
@@ -23,7 +25,7 @@ services:
       function:
         name: "{{ functionName }}"
         description: "Serverless Devs Website vuepress Function"
-        codeUri: ./code/docs/.vuepress/dist
+        codeUri: ./code/packages/hoppscotch-app/dist
         timeout: 30
         memorySize: 512
       triggers:

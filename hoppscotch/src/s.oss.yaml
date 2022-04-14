@@ -13,17 +13,19 @@ vars: # 全局变量
   region: "{{ region }}"
 
 services:
-  website-vuepress:
+  framework:
     component: oss
     actions:
       pre-deploy:
-        - run: npm install
-          path: ./code/vuepress
-        - run: npm run build
-          path: ./code/vuepress
+        - run: npm install -g pnpm
+          path: ./code
+        - run: pnpm i
+          path: ./code
+        - run: pnpm run generate
+          path: ./code
     props:
       bucket: auto
-      codeUri: ./code/vuepress/docs/.vuepress/dist
+      codeUri: ./code/packages/hoppscotch-app/dist
       region: ${vars.region}
       website:
         index: index.html
