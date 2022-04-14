@@ -18,12 +18,12 @@ services:
     actions:
       pre-deploy:
         - run: npm install
-          path: ./code/vuepress
+          path: ./code
         - run: npm run build
-          path: ./code/vuepress
+          path: ./code
     props:
       bucket: auto
-      codeUri: ./code/vuepress/docs/.vuepress/dist
+      codeUri: ./code/docs/.vuepress/dist
       region: ${vars.region}
       website:
         index: index.html

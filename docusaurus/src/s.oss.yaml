@@ -18,12 +18,12 @@ services:
     actions:
       pre-deploy:
         - run: npm install
-          path: ./code/docusaurus
+          path: ./code
         - run: npm run build
-          path: ./code/docusaurus
+          path: ./code
     props:
       bucket: auto
-      codeUri: ./code/docusaurus/build
+      codeUri: ./code/build
       region: ${vars.region}
       website:
         index: index.html
@@ -31,4 +31,3 @@ services:
         subDirType: index
       customDomains:
         - domainName: auto
-
