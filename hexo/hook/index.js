@@ -1,12 +1,7 @@
 const path = require('path');
 
 async function preInit(inputObj) {
-    console.log(`\n  _   _                
-    | | | | _____  _____  
-    | |_| |/ _ \\ \\/ / _ \\ 
-    |  _  |  __/>  < (_) |
-    |_| |_|\\___/_/\\_\\___/ 
-        
+    console.log(`
   Serverless Devs Application Case
     
     Cloud services required：
