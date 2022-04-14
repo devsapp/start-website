@@ -17,7 +17,7 @@
 
 - [:octocat: 源代码](https://github.com/devsapp/start-website/tree/master/website/hoppscotch/src)
 - [:earth_africa: 效果预览](
-http://hoppscotch.website.1767215449378635.cn-hangzhou.fc.devsapp.net)
+http://hoppscotch.website.1767215449378635.cn-hangzhou.fc.devsapp.net/)
 
 ## 通过应用中心部署
 
@@ -52,7 +52,7 @@ http://hoppscotch.website.1767215449378635.cn-hangzhou.fc.devsapp.net)
 
 此时，打开案例地址，就可以看到测试的应用详情：
 
-![图片alt](https://img.alicdn.com/imgextra/i3/O1CN01xtRJW81YlqYTtkdRI_!!6000000003100-2-tps-2566-1200.png)
+![图片alt](https://serverless-devs-app-pkg.oss-cn-beijing.aliyuncs.com/L1VzZXJzL3lrL0xpYnJhcnkvQ2FjaGVzL2RkLndvcmsuZXhjbHVzaXZlNGFsaWRpbmcvdGh1bWJuYWlscy83NTFDOEY3MS02QUQ3LTQ3MzUtQUYwQi0wNTA3MUJDRjY2RDMuZ2lm.gif)
 
 # 关于我们
 - Serverless Devs 工具：

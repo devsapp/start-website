@@ -15,7 +15,7 @@
 
 - [:octocat: source](https://github.com/devsapp/start-website/tree/master/website/hoppscotch/src)
 - [:earth_africa: Effect Preview](
-http://hoppscotch.website.1767215449378635.cn-hangzhou.fc.devsapp.net)
+http://hoppscotch.website.1767215449378635.cn-hangzhou.fc.devsapp.net/)
 
 ## Deploy via command line tools
 
@@ -40,7 +40,7 @@ By Serverless Devs developer tools, you only need a few steps to experience the 
 
 At this time, open the case address and you can see the application details of the test:
 
-![Picture alt](https://img.alicdn.com/imgextra/i3/O1CN01xtRJW81YlqYTtkdRI_!!6000000003100-2-tps-2566-1200.png)
+![Picture alt](https://serverless-devs-app-pkg.oss-cn-beijing.aliyuncs.com/L1VzZXJzL3lrL0xpYnJhcnkvQ2FjaGVzL2RkLndvcmsuZXhjbHVzaXZlNGFsaWRpbmcvdGh1bWJuYWlscy83NTFDOEY3MS02QUQ3LTQ3MzUtQUYwQi0wNTA3MUJDRjY2RDMuZ2lm.gif)
 
 
 # About Us
