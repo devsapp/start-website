@@ -10,12 +10,6 @@ services:
     component: fc # 组件名称
     actions:
       pre-deploy:
-        - run: npm install -g pnpm
-          path: ./code
-        - run: pnpm i
-          path: ./code
-        - run: pnpm run generate
-          path: ./code
         - plugin: website-fc
     props: # 组件的属性值
       region: ${vars.region}
