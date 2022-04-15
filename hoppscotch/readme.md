@@ -42,7 +42,7 @@ http://hoppscotch.website.1767215449378635.cn-hangzhou.fc.devsapp.net/)
 
 本项目是将非常流行文档框架 `hoppscotch`，部署到阿里云 Serverless 平台（函数计算 FC）。
 
-> hoppscotch 是一个开源 API 开发生态系统，您可以一键部署一个云上的`PostMan`
+> hoppscotch 是一个开源 API 开发生态系统，可以方便的进行 API 文档、API 调试、API Mock、API 自动化测试
 
 通过 Serverless Devs 开发者工具，您只需要几步，就可以体验 Serverless 架构，带来的降本提效的技术红利。
 
