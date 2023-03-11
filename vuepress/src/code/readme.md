@@ -20,7 +20,7 @@
 
 ## 代码与预览
 
-- [:octocat: 源代码](https://github.com/devsapp/start-website/tree/master/website-vuepress/src)
+- [:octocat: 源代码](https://github.com/devsapp/start-website/tree/master/vuepress/src)
 - [:earth_africa: 效果预览](http://django.web-framework.1583208943291465.cn-shenzhen.fc.devsapp.net/)
 
 ## 快速部署和体验

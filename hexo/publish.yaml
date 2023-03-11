@@ -4,7 +4,7 @@ Provider:
   - 阿里云
 Version: 0.1.10
 Description: 部署Hexo 博客到函数计算
-HomePage: https://github.com/devsapp/website-starter
+HomePage: https://github.com/devsapp/start-website
 Tags:
   - 静态网站
   - Jamstack
