@@ -79,6 +79,8 @@
 
 <appdetail id="flushContent">
 
+在本地开发和部署时，请确保已生成构建产物，构建产物为 `build` 目录下的静态文件。
+
 本项目是将非常流行文档框架 `Docusaurus`，部署到阿里云 Serverless 平台（函数计算 FC）。
 
 > Docusaurus 将助您在极短时间内搭建优美的文档网站，

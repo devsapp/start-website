@@ -1,5 +1,5 @@
 {
-  "name": "Serverless Dumi Site",
+  "name": "website-dumi",
   "version": "0.0.1",
   "description": "A static site based on dumi",
   "scripts": {

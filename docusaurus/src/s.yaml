@@ -21,16 +21,19 @@ vars: # 全局变量
   functionName: "{{ functionName }}"
 
 resources:
-  nginx-server:
+  docusaurus-site:
     component: fc3
     actions:
       pre-deploy:
-        - run: npm install && npm run build
-          path: ./code
-        - plugin: website-plugin-v3  # 这里引入的是相对路径，正式配置替换成你自己的component名称即可
+        # 当修改初始项目后，执行下列命令进行代码产物构建
+        # - run: export PATH=/usr/local/versions/node/v18.14.2/bin:$PATH && npm install && npm run build
+        #   path: ./code
+        # - run: rm -rf node_modules
+        #   path: ./code
+        - plugin: website-plugin-v3
           args:
-            port: 80            # 监听端口, http 为 80, https 为 443
-            dist: /code/build    # build 后生成的代码目录, 绝对路径, 可参考 example 的目录格式
+            port: 80             # 监听端口, http 为 80, https 为 443
+            dist: /code/build    # build 后生成的代码目录, 绝对路径
     props:
       region: ${vars.region}
       functionName: ${vars.functionName}
@@ -39,7 +42,6 @@ resources:
       memorySize: 512
       code: ./code
       runtime: custom
-
   fc3_domain_0:
     component: fc3-domain
     props:

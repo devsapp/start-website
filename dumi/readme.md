@@ -79,6 +79,8 @@ Serverless Devs 应用开发模板
 
 <appdetail id="flushContent">
 
+在本地开发和部署时，请确保已生成构建产物，构建产物为 `dist` 目录下的静态文件。
+
 本项目是将非常流行组件研发静态站点框架 `Dumi`，部署到阿里云 Serverless 平台（函数计算 FC）。
 
 > Dumi 将助您在极短时间内搭建优美的组件研发静态站点网站，
