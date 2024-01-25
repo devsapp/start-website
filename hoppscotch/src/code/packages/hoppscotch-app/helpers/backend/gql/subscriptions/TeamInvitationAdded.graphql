@@ -1,5 +1,0 @@
-subscription TeamInvitationAdded($teamID: ID!) {
-  teamInvitationAdded(teamID: $teamID) {
-    id
-  }
-}

@@ -1,22 +1,22 @@
 
 > 注：当前项目为 Serverless Devs 应用，由于应用中会存在需要初始化才可运行的变量（例如应用部署地区、函数名等等），所以**不推荐**直接 Clone 本仓库到本地进行部署或直接复制 s.yaml 使用，**强烈推荐**通过 `s init ${模版名称}` 的方法或应用中心进行初始化，详情可参考[部署 & 体验](#部署--体验) 。
 
-# website-docusaurus-v3 帮助文档
+# website-dumi-v3 帮助文档
 <p align="center" class="flex justify-center">
     <a href="https://www.serverless-devs.com" class="ml-1">
-    <img src="http://editor.devsapp.cn/icon?package=website-docusaurus-v3&type=packageType">
+    <img src="http://editor.devsapp.cn/icon?package=website-dumi-v3&type=packageType">
   </a>
-  <a href="http://www.devsapp.cn/details.html?name=website-docusaurus-v3" class="ml-1">
-    <img src="http://editor.devsapp.cn/icon?package=website-docusaurus-v3&type=packageVersion">
+  <a href="http://www.devsapp.cn/details.html?name=website-dumi-v3" class="ml-1">
+    <img src="http://editor.devsapp.cn/icon?package=website-dumi-v3&type=packageVersion">
   </a>
-  <a href="http://www.devsapp.cn/details.html?name=website-docusaurus-v3" class="ml-1">
-    <img src="http://editor.devsapp.cn/icon?package=website-docusaurus-v3&type=packageDownload">
+  <a href="http://www.devsapp.cn/details.html?name=website-dumi-v3" class="ml-1">
+    <img src="http://editor.devsapp.cn/icon?package=website-dumi-v3&type=packageDownload">
   </a>
 </p>
 
 <description>
 
-部署Docusaurus 文档系统到函数计算
+Serverless Devs 应用开发模板
 
 </description>
 
@@ -62,16 +62,16 @@
 
 <appcenter>
    
-- :fire: 通过 [Serverless 应用中心](https://fcnext.console.aliyun.com/applications/create?template=website-docusaurus-v3) ，
-  [![Deploy with Severless Devs](https://img.alicdn.com/imgextra/i1/O1CN01w5RFbX1v45s8TIXPz_!!6000000006118-55-tps-95-28.svg)](https://fcnext.console.aliyun.com/applications/create?template=website-docusaurus-v3) 该应用。
+- :fire: 通过 [Serverless 应用中心](https://fcnext.console.aliyun.com/applications/create?template=website-dumi-v3) ，
+  [![Deploy with Severless Devs](https://img.alicdn.com/imgextra/i1/O1CN01w5RFbX1v45s8TIXPz_!!6000000006118-55-tps-95-28.svg)](https://fcnext.console.aliyun.com/applications/create?template=website-dumi-v3) 该应用。
    
 </appcenter>
 <deploy>
     
 - 通过 [Serverless Devs Cli](https://www.serverless-devs.com/serverless-devs/install) 进行部署：
   - [安装 Serverless Devs Cli 开发者工具](https://www.serverless-devs.com/serverless-devs/install) ，并进行[授权信息配置](https://docs.serverless-devs.com/fc/config) ；
-  - 初始化项目：`s init website-docusaurus-v3 -d website-docusaurus-v3`
-  - 进入项目，并进行项目部署：`cd website-docusaurus-v3 && s deploy -y`
+  - 初始化项目：`s init website-dumi-v3 -d website-dumi-v3`
+  - 进入项目，并进行项目部署：`cd website-dumi-v3 && s deploy -y`
    
 </deploy>
 
@@ -79,20 +79,20 @@
 
 <appdetail id="flushContent">
 
-本项目是将非常流行文档框架 `Docusaurus`，部署到阿里云 Serverless 平台（函数计算 FC）。
+本项目是将非常流行组件研发静态站点框架 `Dumi`，部署到阿里云 Serverless 平台（函数计算 FC）。
 
-> Docusaurus 将助您在极短时间内搭建优美的文档网站，
+> Dumi 将助您在极短时间内搭建优美的组件研发静态站点网站，
 您可以专注于内容创作，仅需编写 Markdown 文件即可。
 
 通过 Serverless Devs 开发者工具，您只需要几步，就可以体验 Serverless 架构，带来的降本提效的技术红利。
 
 部署完成之后，您可以看到系统返回给您的案例地址，例如：
 
-![图片alt](https://img.alicdn.com/imgextra/i1/O1CN010c3YHL1a0nGVe2ZyK_!!6000000003268-0-tps-1196-584.jpg)
+![图片alt](https://img.alicdn.com/imgextra/i3/O1CN01Jy0N4Z21BmOGYjobX_!!6000000006947-0-tps-1382-766.jpg)
 
 此时，打开案例地址，就可以看到测试的应用详情：
 
-![图片alt](https://img.alicdn.com/imgextra/i3/O1CN01SAgalQ1fW09cM1X7i_!!6000000004013-2-tps-1263-664.png)
+![图片alt](https://img.alicdn.com/imgextra/i3/O1CN01TxWTvM1cUDwi4CjKn_!!6000000003603-0-tps-2730-1306.jpg)
 
 </appdetail>
 

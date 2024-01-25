@@ -1,3 +1,0 @@
-mutation LeaveTeam($teamID: ID!) {
-  leaveTeam(teamID: $teamID)
-}

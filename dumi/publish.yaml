@@ -1,21 +1,21 @@
 Edition: 3.0.0
 Type: Project
-Name: website-docusaurus-v3
+Name: website-dumi-v3
+Version: 0.0.1
 Provider:
-  - 阿里云
-Version: 0.0.2
-Description: 部署Docusaurus 文档系统到函数计算
-HomePage: https://github.com/devsapp/start-website
-Organization: 阿里云函数计算（FC）
-Effective: Public
-Tags:
-  - 静态网站
-  - Jamstack
-Category: Jamstack
-Service:
-  函数计算:
-    Authorities:
-      - AliyunFCFullAccess
+  - 阿里云 # 取值内容参考：https://api.devsapp.cn/v3/common/args.html
+Description: Serverless Devs 应用开发模板
+HomePage: https://www.serverless-devs.com
+Tags: #标签详情
+  - 模板
+  - Serverless Devs
+Category: 新手入门 # 取值内容参考：https://api.devsapp.cn/v3/common/args.html
+Service: # 使用的服务
+  函数计算: # 取值内容参考：https://api.devsapp.cn/v3/common/args.html
+    Authorities: #权限描述
+      - AliyunFCFullAccess # 所需要的权限
+Organization: 阿里云函数计算（FC） # 所属组织
+Effective: Public # 是否公开，取值：Public，Private，Organization
 Parameters:
   type: object
   additionalProperties: false # 不允许增加其他属性
@@ -51,5 +51,6 @@ Parameters:
     functionName:
       title: 函数名
       type: string
-      default: docusaurus-${default-suffix}
+      default: dumi-${default-suffix}
       description: 应用的函数名称
+

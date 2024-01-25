@@ -1,7 +1,0 @@
-query GetCollectionRequests($collectionID: ID!, $cursor: ID) {
-  requestsInCollection(collectionID: $collectionID, cursor: $cursor) {
-    id
-    title
-    request
-  }
-}

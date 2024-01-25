@@ -1,3 +1,0 @@
-mutation importFromJSON($jsonString: String!, $teamID: ID!) {
-  importCollectionsFromJSON(jsonString: $jsonString, teamID: $teamID)
-}
