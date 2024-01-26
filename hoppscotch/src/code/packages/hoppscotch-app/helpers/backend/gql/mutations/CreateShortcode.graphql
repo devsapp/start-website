@@ -1,6 +1,0 @@
-mutation CreateShortcode($request: String!) {
-  createShortcode(request: $request) {
-    id
-    request
-  }
-}

@@ -1,5 +1,0 @@
-mutation RenameCollection($newTitle: String!, $collectionID: ID!) {
-  renameCollection(newTitle: $newTitle, collectionID: $collectionID) {
-    id
-  }
-}

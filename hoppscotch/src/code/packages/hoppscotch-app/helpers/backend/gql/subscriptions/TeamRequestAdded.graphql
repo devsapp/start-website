@@ -1,8 +1,0 @@
-subscription TeamRequestAdded($teamID: ID!) {
-  teamRequestAdded(teamID: $teamID) {
-    id
-    collectionID
-    request
-    title
-  }
-}

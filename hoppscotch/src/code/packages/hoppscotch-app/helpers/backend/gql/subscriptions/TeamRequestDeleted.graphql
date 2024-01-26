@@ -1,3 +1,0 @@
-subscription TeamRequestDeleted($teamID: ID!) {
-  teamRequestDeleted(teamID: $teamID)
-}

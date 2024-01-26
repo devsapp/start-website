@@ -1,9 +1,0 @@
-subscription TeamCollectionUpdated($teamID: ID!) {
-  teamCollectionUpdated(teamID: $teamID) {
-    id
-    title
-    parent {
-      id
-    }
-  }
-}

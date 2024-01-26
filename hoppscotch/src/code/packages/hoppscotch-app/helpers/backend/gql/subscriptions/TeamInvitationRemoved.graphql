@@ -1,3 +1,0 @@
-subscription TeamInvitationRemoved($teamID: ID!) {
-  teamInvitationRemoved(teamID: $teamID)
-}
