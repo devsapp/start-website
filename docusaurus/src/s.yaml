@@ -41,7 +41,7 @@ resources:
       timeout: 30
       memorySize: 512
       code: ./code
-      runtime: custom
+      runtime: custom.debian10
   fc3_domain_0:
     component: fc3-domain
     props:
