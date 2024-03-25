@@ -1,10 +1,10 @@
 Edition: 3.0.0
 Type: Project
 Name: website-dumi-v3
-Version: 0.0.5
+Version: 0.0.6
 Provider:
   - 阿里云 # 取值内容参考：https://api.devsapp.cn/v3/common/args.html
-Description: Serverless Devs 应用开发模板
+Description: 本案例将 Dumi ，这一为 React 组件和库的开发者量身打造的文档生成器，快速创建并部署到阿里云函数计算 FC 。
 HomePage: https://www.serverless-devs.com
 Tags: #标签详情
   - 模板
