@@ -26,8 +26,8 @@ resources:
     actions:
       pre-deploy:
         # 当修改初始项目后，执行下列命令进行代码产物构建
-        # - run: export PATH=/usr/local/versions/node/v18.14.2/bin:$PATH && npm install && npm run build
-        #   path: ./code
+        - run: export PATH=/usr/local/versions/node/v18.14.2/bin:$PATH && npm install && npm run build && rm -rf node_modules
+          path: ./code
         # - run: rm -rf node_modules
         #   path: ./code
         - plugin: website-plugin-v3  # 这里引入的是相对路径，正式配置替换成你自己的component名称即可
