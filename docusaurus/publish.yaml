@@ -3,7 +3,7 @@ Type: Project
 Name: start-docusaurus-cap
 Provider:
   - 阿里云
-Version: 0.0.6
+Version: 0.0.7
 Description: 本案例将 Docusaurus ，这一使用者广泛的网站生成器，快速创建并部署到云原生应用开发平台 CAP。
 HomePage: https://github.com/devsapp/start-website/tree/dipper/docusaurus
 Organization: 阿里云函数计算（FC）
@@ -12,6 +12,7 @@ Tags:
   - 静态网站
   - Jamstack
   - Develop
+  - Node.js
 Category: Jamstack
 Service:
   函数计算:
