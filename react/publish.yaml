@@ -3,7 +3,7 @@ Type: Project
 Name: start-react-cap
 Provider:
   - 阿里云
-Version: 0.0.6
+Version: 0.0.7
 Description: 本案例将 React框架，快速创建并部署到云原生应用开发平台 CAP。其组件化、高性能和易于上手的特点，受到了广大开发者的喜爱和追捧。
 HomePage: https://github.com/devsapp/start-website/tree/dipper/react
 Organization: 阿里云函数计算（FC）
@@ -11,6 +11,8 @@ Effective: Public
 Tags:
   - 静态网站
   - Develop
+  - React
+  - Node.js
 Category: 新手入门
 Service:
   函数计算:

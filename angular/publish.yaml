@@ -3,7 +3,7 @@ Type: Project
 Name: start-angular-cap
 Provider:
   - 阿里云
-Version: 0.0.6
+Version: 0.0.7
 Description: 本案例将 Angular ，这一款优秀的前端 JS 框架示例，快速创建并部署到云原生应用开发平台 CAP。
 HomePage: https://github.com/devsapp/start-website/tree/dipper/angular
 Organization: 阿里云函数计算（FC）
@@ -11,6 +11,8 @@ Effective: Public
 Tags:
   - 静态网站
   - Develop
+  - Angular
+  - Node.js
 Category: 新手入门
 Service:
   函数计算:
